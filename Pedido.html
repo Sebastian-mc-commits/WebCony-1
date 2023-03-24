@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="es">
+
+<!-- Mirrored from menucel.com/menudigital/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 22 Nov 2022 04:38:07 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+  <link rel="icon" href="/Imagenes/favicon.ico">
+  <title>Menú Balcony</title>
+    <!--Stiles boostrap-->
+  <link rel="stylesheet" href="../Mystiles/bootstrap.min.css">
+   <!--Estilos css-->
+  <link rel="stylesheet" href="../Mystiles/style_rojo.css">
+     <!--Fontello Redes sociales-->
+  <link rel="stylesheet" href="../Mystiles/fontello.css">
+     <!--Stile js-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <script src="../../kit.fontawesome.com/fe261c437a.js" crossorigin="anonymous"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="h-100 h-custom" style="background-color: #e5eb97;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-0">
+                        <div class="row g-0" id="cartViewContainer">
+                            <div class="col-lg-8">
+                                <div class="p-5" data-cart-items="true">
+                                    <div class="d-flex justify-content-between align-items-center mb-5">
+                                        <h1 class="fw-bold mb-0 text-black">Carrito</h1>
+                                        <div class="pt-5">
+                                            <h6 class="mb-0"><a href="./Platos.html" class="text-body"><i
+                                                        class="fas fa-long-arrow-alt-left me-2"></i>Vuelve a la
+                                                    tienda</a></h6>
+                                        </div>
+
+                                    </div>
+
+                                    <!--End-->
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 bg-grey" data-cart-summary="true">
+                                <div class="p-5">
+                                    <h3 class="fw-bold mb-5 mt-2 pt-1">Resumen</h3>
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-4">
+                                        <h5 class="text-uppercase">Platillos <span data-field="quantity">0</span>
+                                        </h5>
+                                        <h5>$ <span data-field="price">0.0</span></h5>
+                                    </div>
+
+                                    <h5 class="text-uppercase mb-3">Codigo de descuento</h5>
+
+                                    <div class="mb-5">
+                                        <div class="form-outline">
+                                            <input type="text" id="form3Examplea2"
+                                                class="form-control form-control-lg" />
+                                            <label class="form-label" for="form3Examplea2">codigo</label>
+                                        </div>
+                                    </div>
+
+                                    <hr class="my-4">
+
+                                    <div class="d-flex justify-content-between mb-5">
+                                        <h5 class="text-uppercase">Precio Total</h5>
+                                        <h5>$ <span data-field="price">0.0</span></h5>
+                                    </div>
+
+                                    <button type="button" class="btn btn-dark btn-block btn-lg"
+                                        data-mdb-ripple-color="dark" onclick="handlerSoucerPayment()">Pagar</button>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="./JavaScript/cart.js" type="module"></script>
+<script>
+    const handlerSoucerPayment = () => {
+
+        const ids = Array.from(document.querySelectorAll("p[id='saucerId']")).map(element => {
+
+            return {
+                id: parseInt(element.dataset.id),
+                fkCategory: parseInt(element.dataset.fkCategory),
+            }
+        });
+
+        console.log(ids);
+    }
+</script>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+
+</html>
