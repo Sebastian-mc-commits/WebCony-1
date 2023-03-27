@@ -1,0 +1,5 @@
+export { default as userRouter } from './user.routes'
+export { default as categoryRouter } from './category.routes'
+export { default as foodItemRouter } from './foodItem.routes'
+export { default as spotRouter } from './spot.routes'
+export { default as orderRouter } from './order.routes'
